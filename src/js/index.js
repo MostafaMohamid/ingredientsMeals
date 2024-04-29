@@ -247,7 +247,7 @@ function displayCategories(array) {
 
 async function getCategoryMeals(Category) {
   $("#side-nav").animate({ left: -sideWidth }, 500);
-  let response =
+let response =
     await fetch(`https:/www.themealdb.com/api/json/v1/1/filter.php?c=${Category}
   `);
   let Data = await response.json();
