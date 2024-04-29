@@ -20,8 +20,14 @@ getDataFromApi();
 ///searh
 
 function displayMeals(array) {
-  console.log(array);
-  var cartona = ``;
+if(array ==null) {
+console.log("hallo");
+document.getElementById("rowData").innerHTML = "";
+
+}
+else{
+
+var cartona = ``;
   for (let index = 0; index < array.length; index++) {
     cartona += ` 
     <a onclick="getMealDetails('${array[index].idMeal}')" class="card shadow-2xl relative cursor-pointer">
@@ -41,6 +47,8 @@ function displayMeals(array) {
   }
 
   document.getElementById("rowData").innerHTML = cartona;
+
+}
 }
 
 $("#Search").click(function () {
